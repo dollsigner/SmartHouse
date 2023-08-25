@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+
+    <WebView
+        android:id="@+id/webView1"
+        android:layout_width="225dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp" />
+    <LinearLayout
+        android:id="@+id/linearPorperty" 
+        android:orientation="vertical"
+        android:layout_width="225dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/webView1"
+        android:layout_centerHorizontal="true">
+    	
+        <TextView
+	        android:id="@+id/textTemperature"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textColor="#ffffff"
+	        android:textSize="20sp"
+	        android:layout_marginTop="20dp"
+	        android:text="温度: 100°c" />
+        <TextView
+	        android:id="@+id/textHumidity"
+	        android:layout_width="wrap_content"
+	       	android:layout_height="wrap_content"
+	       	android:textColor="#ffffff"
+	       	android:textSize="20sp"
+	       	android:layout_marginTop="20dp"
+	        android:text="湿度: 100%" />
+        <TextView
+	        android:id="@+id/textFire"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textColor="#ffffff"
+	        android:textSize="20sp"
+	        android:layout_marginTop="20dp"
+	        android:text="火警: 发现火情！！！" />  
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:orientation="horizontal"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/linearPorperty">
+        
+        <Button 
+            android:id="@+id/buttonLivingroom" 
+            android:onClick="buttonClick"
+            android:layout_marginTop="10dp"
+            android:text="客厅灯"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#ffffff"/>
+        <Button
+            android:id="@+id/buttonRestaurant" 
+            android:onClick="buttonClick"
+            android:layout_marginTop="10dp"
+            android:text="餐厅灯"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#ffffff"/>
+        <Button 
+            android:id="@+id/buttonUpstairs" 
+            android:onClick="buttonClick"
+            android:layout_marginTop="10dp"
+            android:text="楼梯灯"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#ffffff"/>
+        <Button 
+            android:id="@+id/buttonBathroom"
+            android:onClick="buttonClick" 
+            android:layout_marginTop="10dp"
+            android:text="浴室灯"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#ffffff"/>
+        
+    </LinearLayout>
+
+</RelativeLayout>
